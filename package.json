@@ -1,6 +1,18 @@
 {
   "name": "stripe-payment-modal-next-example",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": "FunnelKake LLC",
+  "description": "Next Stripe Payment Modal demo app",
+  "keywords": [
+    "next",
+    "stripe",
+    "modals",
+    "stripe-checkout",
+    "stripe-popup-next",
+    "stripe-checkout-next",
+    "stripe-checkout-modal"
+  ],
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +20,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "next": "10.0.9",
     "react": "17.0.1",
     "react-dom": "17.0.1"

@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Stripe Payment Modal Next JS Demo
+
+This sample project shows how to implement Stripe payments & subscriptions within a modal dialog using [PaymentModal](https://paymentmodal.com) and [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+### Demo
+
+See a hosted version of the Next JS sample project [here](https://nextjs.paymentmodal.com).
+
+The hosted demo is running in Stripe test mode. Use `4242424242424242` as a test card number with any CVC + future expiration date.
 
 ## Getting Started
 
-First, run the development server:
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To see the Stripe modals in action, you need to create a free [PaymentModal account](https://paymentmodal.com).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Create a [PaymentModal site](https://paymentmodal.com).
+2. Clone this repo
+3. In the project directory, run `cp .env.local.sample .env.local`
+4. Open `.env.local` and update `NEXT_APP_PAYMENT_MODAL_SITE_ID` with your [PaymentModal site id](https://paymentmodal.com)
+5. Run `yarn` to download npm packages
+6. Run `yarn dev` to open the Next app in development mode.
+7. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+8. Update the `products` array in `pages/api/index.js` to use any HTML element attributes to attach click listeners to open your modals.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This sample and hosted demo project uses the following HTML element attributes, but you can use any valid [HTML selector](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#reference_table_of_selectors). Be sure to update the selectors in your PaymentModal account.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `buttonId` creates a modal with a Stripe payment intent using an amount.
+- `className` creates a modal with a Stripe payment intent using a Stripe price id.
+- `dataSubscriptionCheckout` creates a modal with a Stripe subscription using a Stripe price id.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+You can learn more about configuring Stripe modal properties in the [PaymentModal documentation](https://paymentmodal.com/docs).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can learn more about the Next app in the [Next.js](https://nextjs.org/) and [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Get Support
 
-## Deploy on Vercel
+If you found a bug or want to suggest a new [feature/use case/sample], please [file an issue](https://github.com/funnelkake/stripe-payment-modal-nextjs-example/issues).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you have questions, comments, or need help with the code, we're here to help:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+on Twitter at [@paymentmodal](https://twitter.com/paymentmodal)
+on Stack Overflow at the stripe-modal tag
+by [email](mailto:support@paymentmodal.com?subject=[GitHub]%20Source%Next%20Demo)
